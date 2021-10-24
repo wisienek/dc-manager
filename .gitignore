@@ -1,0 +1,9 @@
+*.ini
+node_modules
+./src/Data/*
+
+package-lock.json
+
+.env
+env.sh
+env.bat
