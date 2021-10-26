@@ -1,11 +1,9 @@
 import { Collection, GuildMember, Permissions } from "discord.js";
-
 import { Command } from '../Interfaces';
-
 
 export const command: Command = {
     name: "someone",
-    description: "Losuję osobę",
+    description: "returns random person in guild",
     permission: Permissions.FLAGS.ADMINISTRATOR,
     run: async({ message }) => {
         const members: Collection<string, GuildMember> = await message.guild.members.list();
@@ -13,7 +11,7 @@ export const command: Command = {
 
         const member: GuildMember = members.get(name);
 
-        message.reply(`Wylosowano: ${member.displayName}#${member.user.discriminator}`);
+        message.reply(`random person: ${member.displayName}#${member.user.discriminator}`);
         return;
     }
 };

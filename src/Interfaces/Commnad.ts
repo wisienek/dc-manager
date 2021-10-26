@@ -12,7 +12,7 @@ type CommandOption = {
     type: OptionType;
     description: string;
     name: string;
-    required: boolean;
+    required?: boolean;
     choices?: ApplicationCommandOptionChoice[];
     options?: CommandOption[];
     channelTypes?: ChannelType[];
