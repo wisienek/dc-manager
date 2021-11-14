@@ -44,7 +44,7 @@ class botClient extends Client {
                     command.aliases.forEach( (alias: string) => this.aliases.set(alias, command));
             }
         });
-        console.info(`Zarejestrowano : ${this.commands.size} komend`);
+        console.info(`registered: ${this.commands.size} commands`);
 
         // read events
         const eventPath = path.join( __dirname, "..", "Events" );
